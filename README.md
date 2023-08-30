@@ -19,11 +19,10 @@ conda activate CMAN
 pip install tensorflow=1.15.0 numpy=1.19.5 SimpleITK h5py
 ```
 # Data preparation
-Example preprocessed datasets could be found in [SLiver, LiTS, LSPIG](https://drive.google.com/file/d/1xQMmYk9S8En2k_uavytuHeeSmN253jKo/view) and [MSD, BFH](https://drive.google.com/file/d/17IiuM74HPj1fsWwkAfq-5Rc6r5vpxUJF/view.). Note that LSPIG dataset support pair-wise registration.\
-Example of json file could be found in `./datasets/liver.json` \
-Please refer to the file `data_preprocess.py` for the generation of h5 and json file 
-
-The data preparation includes 2 steps:
+Example preprocessed datasets could be found in [SLiver, LiTS, LSPIG](https://drive.google.com/file/d/1xQMmYk9S8En2k_uavytuHeeSmN253jKo/view) and [MSD, BFH](https://drive.google.com/file/d/17IiuM74HPj1fsWwkAfq-5Rc6r5vpxUJF/view.). Note that only LSPIG dataset support pair-wise registration.\
+Example of json file could be found in `./datasets/liver.json` 
+ 
+If you want to use your own dataset, please follow these 2 steps for the data preparation (Refer to file `data_preprocess.py` for the generation of h5 file and json file):
 1. Compress each of your dataset in a single h5 file
 - Original data folder should look like this:
 ```
