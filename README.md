@@ -3,7 +3,7 @@ By Xuan Loc Pham, Manh Ha Luu, Theo van Walsum, Hong Son Mai, Stefan Klein, Ngoc
 
 :rocket: 03/2023: Submitted to Medical Image Analysis journal \
 :rocket: 04/2023: Under review \
-:rocket: Updated 09/2023: The manuscript of CMAN is currently under review in Medical Image Analysis journal. We will update the review status soon.
+:rocket: Updated 09/2023: The manuscript of CMAN is currently under review in Medical Image Analysis journal. We will update the review status and complete the source code soon.
 
 # Introduction
 CMAN is a deeplearning-based image registration platform, which is designed specifically to handle the large and complex deformations between images. We verified the performance of CMAN through extensive experiments on multi-source liver datasets.
