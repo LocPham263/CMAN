@@ -99,6 +99,7 @@ python train.py -b CMAN_CA -n 5 --batch 1
 python train.py -b CMAN -n 4 --batch 1 -c weights/checkpoints
 ```
 
+Consider calibrating the regularization loss and the number of cascades to avoid foldings. \
 For more options, please refer to file `train.py`
 
 # Inference
@@ -124,7 +125,7 @@ The registration results could be found in the `evaluate` folder. Customize the 
 link = './evaluate/main_dataset/' + model_name + ...
 ```
 # Quick trial
-For a quick trial of CMAN, please download a preprocessed dataset above (Ex: sliver dataset), add to the datasets folder, and then download the [5-cascade pre-trained weight](https://vnueduvn-my.sharepoint.com/:f:/g/personal/xuanloc97ars_vnu_edu_vn/Epr0XIRCQzdDikuXiqNf1MwBKp9zVXRZiph3KBWsyNs3Kw?e=8QbWyk) or [3-cascade pre-trained weight](https://vnueduvn-my.sharepoint.com/:f:/g/personal/xuanloc97ars_vnu_edu_vn/EnN705dPswtNgiHje8wmrxABDSYJ46Pd-DVunL8BZmmVoA?e=qHKnm7). Then run the inference command
+For a quick trial of CMAN, please download a preprocessed dataset above (Ex: sliver dataset), add to the datasets folder, and then download the weight [3-cascade pre-trained weight](https://vnueduvn-my.sharepoint.com/:f:/g/personal/xuanloc97ars_vnu_edu_vn/EnN705dPswtNgiHje8wmrxABDSYJ46Pd-DVunL8BZmmVoA?e=qHKnm7). Then run the inference command
 ```bash
 python eval.py -c weights/3-cascade -v sliver 
 ```
