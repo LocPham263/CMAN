@@ -3,8 +3,7 @@ import tflearn
 import numpy as np
 
 from .utils import Network
-from .base_networks import VTN, VoxelMorph, DUAL, CMAN, CMAN_CA, CMAN_SA, VTNAffineStem
-# from .base_networks import VTN, VoxelMorph, DUAL, CMAN, CMAN_CA, CMAN_SA
+from .base_networks import CMAN, CMAN_CA, CMAN_SA, VTNAffineStem
 from .spatial_transformer import Dense3DSpatialTransformer, Fast3DTransformer
 from .trilinear_sampler import TrilinearSampler
 
