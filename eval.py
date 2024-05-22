@@ -43,7 +43,6 @@ tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 import network
 import data_util.liver
-import data_util.brain
 
 
 def main():
