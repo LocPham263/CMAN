@@ -1,9 +1,11 @@
 # CMAN: Cascaded Multi-scale Spatial Channel Attention-guided Network for Large 3D Deformable Registration of Liver CT Images
 By Xuan Loc Pham, Manh Ha Luu, Theo van Walsum, Hong Son Mai, Stefan Klein, Ngoc Ha Le, Duc Trinh Chu   
+https://www.sciencedirect.com/science/article/pii/S1361841524001373
 
 :rocket: 03/2023: Submitted to Medical Image Analysis journal \
 :rocket: 04/2023: Under review \
-:rocket: Updated 01/2024: The manuscript of CMAN has been potentially accepted for Medical Image Analysis journal. We're currently working on the revisions.
+:rocket: 01/2024: The manuscript of CMAN has been potentially accepted for Medical Image Analysis journal. We're currently working on the revisions. \
+:rocket: 05/2024: CMAN has been published in the Medical Image Analysis journal.
 
 # Introduction
 CMAN is a deeplearning-based image registration platform, which is designed specifically to handle the large and complex deformations between images. We verified the performance of CMAN through extensive experiments on multi-source liver datasets.
@@ -16,12 +18,14 @@ CMAN solves the large deformable liver CT registration problem by dividing the l
 
 # Environment setup
 1. Install [miniconda](https://docs.conda.io/en/latest/miniconda.html)
-2. Create and setup conda environment 
+2. Create and setup conda environment (Pls be aware of the versions of the packages and your cuda version) 
 ``` bash
 conda create --name CMAN python=3.7.13 
 conda activate CMAN
-pip install tensorflow==1.15.0 numpy==1.19.5 SimpleITK h5py tqdm scipy scikit-image matplotlib
+pip install tensorflow=1.15.0 keras=2.1.6 tflearn=0.5.0 numpy=1.19.5 protobuf==3.20 SimpleITK h5py tqdm scipy scikit-image matplotlib
 ```
+3. We will soon provide a Docker for the project for ease of reproducibility
+
 # Data preparation
 Example preprocessed datasets could be found in [SLiver, LiTS, LSPIG](https://drive.google.com/file/d/1xQMmYk9S8En2k_uavytuHeeSmN253jKo/view) and [MSD, BFH](https://drive.google.com/file/d/17IiuM74HPj1fsWwkAfq-5Rc6r5vpxUJF/view.). Note that only LSPIG dataset support pair-wise registration.\
 Example of json file could be found in `./datasets/liver.json` 
@@ -122,7 +126,7 @@ link = './evaluate/main_dataset/' + model_name + ...
 # Quick trial
 For a quick trial of CMAN, please download a preprocessed dataset above (Ex: sliver dataset), add to the datasets folder, and then download the [5-cascade pre-trained weight](https://vnueduvn-my.sharepoint.com/:f:/g/personal/xuanloc97ars_vnu_edu_vn/Epr0XIRCQzdDikuXiqNf1MwBKp9zVXRZiph3KBWsyNs3Kw?e=8QbWyk) or [3-cascade pre-trained weight](https://vnueduvn-my.sharepoint.com/:f:/g/personal/xuanloc97ars_vnu_edu_vn/EnN705dPswtNgiHje8wmrxABDSYJ46Pd-DVunL8BZmmVoA?e=qHKnm7). Then run the inference command
 ```bash
-python eval.py -c weights/5-cascade -v sliver 
+python eval.py -c weights/3-cascade -v sliver 
 ```
 
 
