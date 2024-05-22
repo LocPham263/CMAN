@@ -22,7 +22,7 @@ CMAN solves the large deformable liver CT registration problem by dividing the l
 ``` bash
 conda create --name CMAN python=3.7.13 
 conda activate CMAN
-pip install tensorflow=1.15.0 keras=2.1.6 tflearn=0.5.0 numpy=1.19.5 protobuf==3.20 SimpleITK h5py tqdm scipy scikit-image matplotlib
+pip install tensorflow==1.15.0 keras==2.1.6 tflearn==0.5.0 numpy==1.19.5 protobuf==3.20 SimpleITK h5py tqdm scipy scikit-image matplotlib
 ```
 3. We will soon provide a Docker for the project for ease of reproducibility
 
